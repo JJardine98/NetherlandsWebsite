@@ -98,8 +98,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+            <img src="./Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+            <a class="navbar-brand" id="nav-title" href="#">
                 Netherlands
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -108,29 +108,34 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" id="home-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./Pages/History.html">History</a>
+                        <a class="nav-link" id="history-link" href="./Pages/History.html">History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./Pages/Geography.html">Geography</a>
+                        <a class="nav-link" id="geography-link" href="./Pages/Geography.html">Geography</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./Pages/Culture.html">Culture</a>
+                        <a class="nav-link" id="culture-link" href="./Pages/Culture.html">Culture</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./Pages/Current.html">Current</a>
+                        <a class="nav-link" id= "current-link" href="./Pages/Current.html">Current</a>
                     </li>
                 </ul>
+                <!-- Translation Button -->
+                <button class="btn btn-outline-light btn-sm ms-3" id="translate-button-en" onclick="changeLanguage('en')">English</button>
+                <button class="btn btn-outline-light btn-sm ms-3" id="translate-button-nl" onclick="changeLanguage('nl')">Dutch</button>
+
             </div>
         </div>
     </nav>
+    
 
-    <div class="hero-section">
-        <div class="container">
-            <h1 class="display-3 mb-4">Welcome to the Netherlands</h1>
-            <p class="lead">Discover the land of windmills, tulips, and endless possibilities</p>
+    <div class="hero-section text-white text-center d-flex align-items-center justify-content-center" id="hero-section">
+        <div class="container" id="hero-container">
+            <h1 class="display-3 mb-4" id="welcome"></h1>
+            <p class="lead" id="ebtn"></p>
         </div>
     </div>
 
@@ -141,8 +146,8 @@
                     <div class="feature-card">
                         <img src="./Images/NetherlandsHistory.jpg" alt="Dutch History">
                         <div class="feature-content">
-                            <h3 class="feature-title">History</h3>
-                            <p class="text-muted">Explore the rich heritage of the Dutch Golden Age</p>
+                            <h3 class="feature-title" id="history-title"></h3>
+                            <p class="text-muted" id="history-description"></p>
                         </div>
                     </div>
                 </a>
@@ -153,8 +158,8 @@
                     <div class="feature-card">
                         <img src="./Images/scenicbackground.jpeg" alt="Dutch Geography">
                         <div class="feature-content">
-                            <h3 class="feature-title">Geography</h3>
-                            <p class="text-muted">Discover beautiful landscapes and waterways</p>
+                            <h3 class="feature-title" id="geography-title">Geography</h3>
+                            <p class="text-muted" id="geography-description">Discover beautiful landscapes and waterways</p>
                         </div>
                     </div>
                 </a>
@@ -165,8 +170,8 @@
                     <div class="feature-card">
                         <img src="./Images/vangogh.jpg" alt="Dutch Culture">
                         <div class="feature-content">
-                            <h3 class="feature-title">Culture</h3>
-                            <p class="text-muted">Experience Dutch art and traditions</p>
+                            <h3 class="feature-title" id="culture-title">Culture</h3>
+                            <p class="text-muted" id="culture-description">Explore the rich cultural heritage of the Netherlands</p>
                         </div>
                     </div>
                 </a>
@@ -177,8 +182,8 @@
                     <div class="feature-card">
                         <img src="./Images/amsterdamcurrent.jpg" alt="Current Netherlands">
                         <div class="feature-content">
-                            <h3 class="feature-title">Current</h3>
-                            <p class="text-muted">Modern life in the Netherlands</p>
+                            <h3 class="feature-title" id="current-title">Current</h3>
+                            <p class="text-muted" id="current-description">Discover the latest news and trends in the Netherlands</p>
                         </div>
                     </div>
                 </a>
@@ -189,5 +194,108 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
+
+    <script>
+        i18next.init({
+          lng: 'en', // Default language
+          resources: {
+            en: {
+              translation: {
+                "translate-button-en": "English",
+                "translate-button-nl": "Dutch",
+                "nav-title": "Netherlands",
+                "welcomeMessage": "Welcome to the Netherlands",
+                "exploreButton": "Explore the land of windmills, tulips, and endless possibilities",
+                "home-link" : "Home",
+                "history-link" : "History",
+                "geography-link" : "Geography",
+                "culture-link" : "Culture",
+                "current-link" : "Current",
+                "history-title": "History",
+                "history-description": "Discover the rich history of the Netherlands.",
+                "geography-title": "Geography",
+                "geography-description": "Discover beautiful landscapes and waterways",
+                "culture-title": "Culture",
+                "culture-description": "Explore the rich cultural heritage of the Netherlands",
+                "current-title": "Current",
+                "current-description": "Discover the latest news and trends in the Netherlands"
+                
+              }
+            },
+            nl: {
+              translation: {
+                "translate-button-en": "Engels",
+                "translate-button-nl": "Nederlands",
+                "nav-title": "Nederland",
+                "welcomeMessage": "Welkom in Nederland",
+                "exploreButton": "Verken de land van windmills, tulissen en onendige mogelijkheden",
+                "home-link" : "Home",
+                "history-link": "Historie",
+                "geography-link" : "Geografie",
+                "culture-link" : "Cultuur",
+                "current-link" : "Huidige Nederland",
+                "history-title": "Historie",
+                "history-description": "Ontdek de rijke geschiedenis van Nederland.",
+                "geography-title": "Geografie",
+                "geography-description": "Ontdek mooie landen en waterwegen",
+                "culture-title": "Cultuur",
+                "culture-description": "Ontdek de rijke cultuurvereniging van Nederland",
+                "current-title": "Huidige Nederland",
+                "current-description": "Ontdek de laatste nieuws en trends in Nederland"
+
+                // Add more key-value pairs as needed
+              }
+            }
+          }
+        }, function(err, t) {
+          // Translate content after initialization
+          document.getElementById('translate-button-en').innerText = t('translate-button-en');
+          document.getElementById('translate-button-nl').innerText = t('translate-button-nl');
+          document.getElementById('nav-title').innerText = t('nav-title');
+          document.getElementById('welcome').innerText = t('welcomeMessage');
+          document.getElementById('ebtn').innerText = t('exploreButton');
+          document.getElementById('home-link').innerText = t('home-link');
+          document.getElementById('history-link').innerText = t('history-link');
+          document.getElementById('geography-link').innerText = t('geography-link');
+          document.getElementById('culture-link').innerText = t('culture-link');
+          document.getElementById('current-link').innerText = t('current-link');
+          document.getElementById('history-title').innerText = t('history-title');
+          document.getElementById('history-description').innerText = t('history-description');
+          document.getElementById('geography-title').innerText = t('geography-title');
+          document.getElementById('geography-description').innerText = t('geography-description');
+          document.getElementById('culture-title').innerText = t('culture-title');
+          document.getElementById('culture-description').innerText = t('culture-description');
+          document.getElementById('current-title').innerText = t('current-title');
+          document.getElementById('current-description').innerText = t('current-description');
+          
+        });
+      
+        // Function to change language dynamically
+        function changeLanguage(lng) {
+          i18next.changeLanguage(lng, function(err, t) {
+            document.getElementById('translate-button-en').innerText = t('translate-button-en');
+            document.getElementById('translate-button-nl').innerText = t('translate-button-nl');
+            document.getElementById('nav-title').innerText = t('nav-title');
+            document.getElementById('welcome').innerText = t('welcomeMessage');
+            document.getElementById('ebtn').innerText = t('exploreButton');
+            document.getElementById('home-link').innerText = t('home-link');
+            document.getElementById('history-link').innerText = t('history-link');
+            document.getElementById('geography-link').innerText = t('geography-link');
+            document.getElementById('culture-link').innerText = t('culture-link');
+            document.getElementById('current-link').innerText = t('current-link');
+            document.getElementById('history-title').innerText = t('history-title');
+            document.getElementById('history-description').innerText = t('history-description');
+            document.getElementById('geography-title').innerText = t('geography-title');
+            document.getElementById('geography-description').innerText = t('geography-description');
+            document.getElementById('culture-title').innerText = t('culture-title');
+            document.getElementById('culture-description').innerText = t('culture-description');
+            document.getElementById('current-title').innerText = t('current-title');
+            document.getElementById('current-description').innerText = t('current-description');
+          });
+        }
+      </script>
+      
 </body>
 </html>
