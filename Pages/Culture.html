@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dutch Culture - Traditions & Heritage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --dutch-orange: #FF6B1A;
+            --dutch-blue: #003DA5;
+            --dutch-red: #EA2027;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: var(--dutch-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navebar-nav .nav-link {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1558000143-a78f8299c40b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            color: var(--dutch-blue);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .culture-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .culture-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .culture-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--dutch-orange);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .tradition-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .tradition-icon {
+            font-size: 2rem;
+            color: var(--dutch-orange);
+            margin-right: 1rem;
+        }
+
+        .flag-image {
+            width:20px;
+            height:20px;
+        }
+
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        
+
+        .symbol-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--dutch-orange);
+        }
+
+        .symbol-content {
+            padding: 1.5rem;
+        }
+
+        .symbol-title {
+            color: var(--dutch-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .symbol-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+                Netherlands
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Geography.html">Geography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Current.html">Current</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 mb-4">Dutch Culture</h1>
+            <p class="lead">Exploring the Rich Cultural Heritage of the Netherlands</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    
+
+                    <h2 class="section-title">Holidays & Royal Traditions</h2>
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="fas fa-crown tradition-icon"></i>
+                        <div>
+                            <h4>King's Day (Koningsdag)</h4>
+                            <p>The national holiday celebrating the monarch's birthday, where the entire country turns orange and participates in festivities and flea markets.</p>
+                        </div>
+                    </div>
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="fas fa-crown tradition-icon"></i>
+                        <div>
+                            <h4>Orange Symbolism</h4>
+                            <p>Orange is a symbol of the Dutch Republic and is used in various government and corporate branding. It is also associated with the Dutch flag and is often used in national holidays and celebrations.</p>
+                        </div>
+                    </div>
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="fas fa-ribbon tradition-icon"></i>
+                        <div>
+                            <h4>Sinterklaas (St. Nicholas Day)</h4>
+                            <p>On December 5th, children receive a gift from Santa Claus, who is often depicted as a red-suited man with a red beard. The Dutch celebrate this day with elaborate costumes and decorations.</p>
+                        </div>
+                    </div>
+
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="fas fa-leaf tradition-icon"></i>
+                        <div>
+                            <h4>Carnival (Carnaval)</h4>
+                            <p>During the Carnival, people dress up in costumes and participate in parades and street parties. The Dutch Carnival is known for its colorful costumes and lively atmosphere. It is primarily popular in the southern provinces.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box">
+                        "Dutch Holidays are a time to celebrate and enjoy the country's rich cultural heritage and traditions."
+                    </div>
+
+
+                    <h2 class="section-title mt-5">National Symbols</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="culture-card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png?auto=format&fit=crop&w=800&q=80" alt="Dutch Masters" class="culture-image">
+                                <div class="p-4">
+                                    <h4>Netherlands Flag</h4>
+                                    <p> The national flag consists of three horizontal stripes of red, white, and blue. It symbolizes freedom and independence and is often displayed during national holidays, such as King's Day.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="culture-card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg/220px-Royal_coat_of_arms_of_the_Netherlands.svg.png?auto=format&fit=crop&w=800&q=80" alt="Architecture" class="culture-image">
+                                <div class="p-4">
+                                    <h4>Coat of Arms</h4>
+                                    <p>The Dutch coat of arms features a lion holding a sword and arrows, symbolizing defense and unity. It is also known as the "Golden Lion" and is often displayed on government buildings and in public spaces.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <h2 class="section-title mt-5">Art & Architecture</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="culture-card">
+                                <img src="https://images.unsplash.com/photo-1524047934617-cb782c24e5f3?auto=format&fit=crop&w=800&q=80" alt="Dutch Masters" class="culture-image">
+                                <div class="p-4">
+                                    <h4>Dutch Masters</h4>
+                                    <p>The Netherlands has produced some of the world's most renowned artists, including Rembrandt, Vermeer, and Van Gogh. The Dutch Golden Age of painting in the 17th century was marked by detailed realism and mastery of light.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="culture-card">
+                                <img src="https://images.unsplash.com/photo-1558551649-e44c8f992010?auto=format&fit=crop&w=800&q=80" alt="Architecture" class="culture-image">
+                                <div class="p-4">
+                                    <h4>Dutch Architecture</h4>
+                                    <p>Dutch architecture is known for its innovative designs, from traditional canal houses to modern sustainable buildings. The country is a pioneer in water management architecture and urban planning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="section-title mt-5">Food & Culinary Traditions</h2>
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="fa-solid fa-stroopwafel tradition-icon"></i>
+                        <div>
+                            <h4>Stroopwafels</h4>
+                            <p>A popular treat made of two thin layers of baked dough with a caramel-like syrup filling. These waffles symbolize the warm and friendly culture of the Dutch.</p>
+                        </div>
+                    </div>
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="fa-solid fa-cheese tradition-icon"></i>
+                        <div>
+                            <h4>Cheese</h4>
+                            <p>The Netherlands is known for its cheese, with Gouda, Edam, and Leiden among the most famous varieties. Traditional cheese markets, like those in Alkmaar and Gouda, continue to draw visitors and showcase cheese-weighing rituals.</p>
+                        </div>
+                    </div>
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="tradition-icon">&#x1F35F;</i>
+                        <div>
+                            <h4>Patat (Fries)</h4>
+                            <p>Dutch fries, also known as patat, are thick-cut and often served with a variety of sauces. The most traditional sauce is fritessaus, a type of mayonnaise, but they can also be served with peanut sauce (satay), ketchup, or a variety of other dressings. Dutch fries are so popular that they are often served with almost every meal.</p>
+                        </div>
+                    </div>
+
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="tradition-icon">&#129364;</i>
+                        <div>
+                            <h4>Bitterballen</h4>
+                            <p>A popular Dutch snack, bitterballen are deep-fried meatballs filled with a mixture of beef or veal ragout. They are typically served with mustard for dipping and are commonly found at Dutch bars and cafes, particularly during drinks with friends.</p>
+                        </div>
+                    </div>
+
+                    <div class="tradition-item" data-aos="fade-up">
+                        <i class="tradition-icon">&#129364;</i>
+                        <div>
+                            <h4>Kroket</h4>
+                            <p>A popular snack similar to bitterballen, but in the form of a cylindrical croquette filled with beef or chicken ragout. It's deep-fried to a crispy golden exterior and is often eaten as a snack or quick meal.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="quote-box">
+                        "Dutch Food is a fusion of traditional Dutch dishes with modern flavors and ingredients, making it a unique and delicious cuisine."
+                    </div>
+
+
+
+
+                    <h2 class="section-title mt-5">Modern Dutch Culture</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="culture-card">
+                                <img src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=80" alt="Modern Life" class="culture-image">
+                                <div class="p-4">
+                                    <h4>Contemporary Lifestyle</h4>
+                                    <p>Modern Dutch society is known for its progressive values, work-life balance, and environmental consciousness. The Dutch embrace innovation while maintaining their cultural heritage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="culture-card">
+                                <img src="https://images.unsplash.com/photo-1542219550-37153d387c27?auto=format&fit=crop&w=800&q=80" alt="Dutch Design" class="culture-image">
+                                <div class="p-4">
+                                    <h4>Dutch Design</h4>
+                                    <p>Contemporary Dutch design is celebrated worldwide for its minimalist aesthetics, functionality, and sustainable approach. Dutch designers are at the forefront of innovation in fashion, product design, and architecture.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

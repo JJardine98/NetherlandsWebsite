@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Netherlands - Discover the Land of Tulips</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --dutch-orange: #FF6B1A;
+            --dutch-blue: #003DA5;
+            --dutch-red: #EA2027;
+        }
+
+        .navbar {
+            background-color: var(--dutch-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navebar-nav .nav-link {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('./Images/scenicbackground.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .carousel-item img {
+            height: 60vh;
+            object-fit: cover;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .feature-content {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .feature-title {
+            color: var(--dutch-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--dutch-blue);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 40vh;
+            }
+            .feature-card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+                Netherlands
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/Geography.html">Geography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/Culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/Current.html">Current</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-3 mb-4">Welcome to the Netherlands</h1>
+            <p class="lead">Discover the land of windmills, tulips, and endless possibilities</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <a href="./Pages/History.html" class="text-decoration-none">
+                    <div class="feature-card">
+                        <img src="./Images/NetherlandsHistory.jpg" alt="Dutch History">
+                        <div class="feature-content">
+                            <h3 class="feature-title">History</h3>
+                            <p class="text-muted">Explore the rich heritage of the Dutch Golden Age</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <a href="./Pages/Geography.html" class="text-decoration-none">
+                    <div class="feature-card">
+                        <img src="./Images/scenicbackground.jpeg" alt="Dutch Geography">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Geography</h3>
+                            <p class="text-muted">Discover beautiful landscapes and waterways</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <a href="./Pages/Culture.html" class="text-decoration-none">
+                    <div class="feature-card">
+                        <img src="./Images/vangogh.jpg" alt="Dutch Culture">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Culture</h3>
+                            <p class="text-muted">Experience Dutch art and traditions</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <a href="./Pages/Current.html" class="text-decoration-none">
+                    <div class="feature-card">
+                        <img src="./Images/amsterdamcurrent.jpg" alt="Current Netherlands">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Current</h3>
+                            <p class="text-muted">Modern life in the Netherlands</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

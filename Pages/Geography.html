@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dutch Geography - Landscapes & Cities</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --dutch-orange: #FF6B1A;
+            --dutch-blue: #003DA5;
+            --dutch-red: #EA2027;
+        }
+
+        .navbar {
+            background-color: var(--dutch-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1558697698-9300a84a6a99?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            color: var(--dutch-blue);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--dutch-orange);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .nav-tabs {
+            border-bottom: 2px solid var(--dutch-red);
+            margin-bottom: 2rem;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+            color: var(--dutch-blue);
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: var(--dutch-red);
+            border-bottom: 3px solid var(--dutch-red);
+            background: transparent;
+        }
+
+        .tab-content {
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+                Netherlands
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Geography.html">Geography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Current.html">Current</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 mb-4">Dutch Geography</h1>
+            <p class="lead">Exploring the Landscapes of the Netherlands</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <ul class="nav nav-tabs justify-content-center" id="geographyTabs" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#landmarks">
+                    Landmarks & Sites
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#features">
+                    Natural Features
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#location">
+                    Location & Cities
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="landmarks">
+                <div class="row g-4">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="feature-card">
+                            <img src="../Images/vgmuseum.jpg" alt="Van Gogh Museum" class="feature-image">
+                            <div class="p-4">
+                                <h3>Van Gogh Museum</h3>
+                                <p>Home to the world's largest collection of works by Vincent van Gogh, featuring over 200 paintings and 500 drawings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <img src="../Images/muiderslot.jpg" alt="Muiderslot Castle" class="feature-image">
+                            <div class="p-4">
+                                <h3>Muiderslot Castle</h3>
+                                <p>A medieval castle dating back to 1285, surrounded by water and beautiful gardens.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional landmarks... -->
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="features">
+                <div class="row g-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="feature-card" data-aos="fade-up">
+                            <img src="../Images/hills.png" alt="Dutch Hills" class="feature-image">
+                            <div class="p-4">
+                                <h3>Natural Landscapes</h3>
+                                <p>Despite being known as a flat country, the Netherlands features varied landscapes including rolling hills in the south.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional natural features... -->
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="location">
+                <div class="row g-4">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="feature-card" data-aos="fade-up">
+                            <div class="p-4">
+                                <h3>Strategic Location</h3>
+                                <p>Located in Western Europe, the Netherlands borders Germany to the east, Belgium to the south, and the North Sea to the northwest.</p>
+                                <div class="quote-box">
+                                    "The Netherlands' strategic position at the mouth of several major European rivers has been key to its development as a trading nation."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modern Netherlands - Today's Dutch Society</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --dutch-orange: #FF6B1A;
+            --dutch-blue: #003DA5;
+            --dutch-red: #EA2027;
+        }
+
+        .navbar {
+            background-color: var(--dutch-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            color: var(--dutch-blue);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--dutch-orange);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dutch-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .innovation-icon {
+            font-size: 2.5rem;
+            color: var(--dutch-orange);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: var(--dutch-orange);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--dutch-orange);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+                Netherlands
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Geography.html">Geography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Current.html">Current</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 mb-4">Modern Netherlands</h1>
+            <p class="lead">Innovation, Sustainability, and Progress</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title text-center mb-5">Key Statistics</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">17.4M</div>
+                        <div class="stat-label">Population (2023)</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">€52K</div>
+                        <div class="stat-label">GDP per Capita</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">91%</div>
+                        <div class="stat-label">Internet Penetration</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">#5</div>
+                        <div class="stat-label">Global Innovation Index</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title">Innovation & Technology</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="p-4 text-center">
+                            <i class="fas fa-seedling innovation-icon"></i>
+                            <h3>Sustainable Agriculture</h3>
+                            <p>World's second-largest food exporter, pioneering sustainable farming techniques and vertical agriculture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="p-4 text-center">
+                            <i class="fas fa-water innovation-icon"></i>
+                            <h3>Water Management</h3>
+                            <p>Global leader in water management technology and coastal protection systems.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="p-4 text-center">
+                            <i class="fas fa-bicycle innovation-icon"></i>
+                            <h3>Green Transportation</h3>
+                            <p>Leading in bicycle infrastructure and electric vehicle adoption.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title">Recent Developments</h2>
+            <div class="timeline-item">
+                <h4>2023: Climate Action</h4>
+                <p>New initiatives to reduce carbon emissions by 55% by 2030.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2022: Digital Innovation</h4>
+                <p>Amsterdam ranked as one of Europe's top startup ecosystems.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2021: Sustainable Housing</h4>
+                <p>Implementation of new energy-neutral building standards.</p>
+            </div>
+        </section>
+
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title">Quality of Life</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1524047934617-cb782c24e5f3?auto=format&fit=crop&w=1000&q=80" alt="Dutch Healthcare" class="feature-image">
+                        <div class="p-4">
+                            <h3>Healthcare System</h3>
+                            <p>Ranked among the best healthcare systems globally, with universal coverage and high-quality care.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80" alt="Dutch Education" class="feature-image">
+                        <div class="p-4">
+                            <h3>Education</h3>
+                            <p>World-class education system with high international student satisfaction rates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" data-aos="fade-up">
+            <div class="quote-box">
+                <blockquote>
+                    "The Netherlands continues to be a global leader in innovation, sustainability, and quality of life, setting examples for countries worldwide in areas such as water management, sustainable agriculture, and green transportation."
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

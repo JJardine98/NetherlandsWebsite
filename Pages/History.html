@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dutch History - Timeline & Heritage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --dutch-orange: #FF6B1A;
+            --dutch-blue: #003DA5;
+            --dutch-red: #EA2027;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: var(--dutch-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navebar-nav .nav-link {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://aboutnl.com/wp-content/uploads/2023/05/8cecbc_e4eb29b7f28842a2a123653f407942f4mv2.jpg?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            color: var(--dutch-blue);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .history-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .history-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .history-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--dutch-orange);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            width: 50%;
+            padding: 0 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline-date {
+            color: var(--dutch-orange);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--dutch-orange);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .key-figure {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .figure-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+                Netherlands
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Geography.html">Geography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Current.html">Current</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 mb-4">Dutch History</h1>
+            <p class="lead">From Medieval Times to Modern Netherlands</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Golden Age</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="history-card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/De_Gouden_Leeuw_Vlaggenschip_%28Flagship%29_Detail%2C_Willem_van_de_Velde_%28I%29.png?auto=format&fit=crop&w=800&q=80" alt="Dutch Trade" class="history-image">
+                                <div class="p-4">
+                                    <h4>Maritime Trade</h4>
+                                    <p>During the 17th century, the Dutch Republic was the world's leading maritime power, with a vast trading empire spanning the globe. The Dutch East India Company (VOC) became the world's first multinational corporation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="history-card">
+                                <img src="https://www.netherlandsandyou.nl/documents/d/singapore/vangoghstarrynight-jpg?imagePreview=1?auto=format&fit=crop&w=800&q=80" alt="Art History" class="history-image">
+                                <div class="p-4">
+                                    <h4>Cultural Renaissance</h4>
+                                    <p>The Golden Age saw unprecedented achievements in art, science, and trade. Dutch painters like Rembrandt and Vermeer created masterpieces that continue to influence artists today.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote-box">
+                        "The Dutch Golden Age marked a period of unprecedented prosperity and cultural achievement, establishing the Netherlands as a major world power."
+                    </div>
+
+                    <h2 class="section-title mt-5">Key Historical Figures</h2>
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/William_I%2C_Prince_of_Orange_by_Adriaen_Thomasz._Key_Rijksmuseum_Amsterdam_SK-A-3148.jpg/220px-William_I%2C_Prince_of_Orange_by_Adriaen_Thomasz._Key_Rijksmuseum_Amsterdam_SK-A-3148.jpg" alt="William of Orange" class="figure-image">
+                        <div>
+                            <h4>William of Orange</h4>
+                            <p>Also known as William the Silent, he was the main leader of the Dutch Revolt against Spanish rule, which led to the Eighty Years' War and ultimately resulted in the independence of the Dutch Republic. He is considered the "Father of the Fatherland" in the Netherlands.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "I have come to the conclusion that my country is worth more than my life."
+                        </blockquote>
+                        <footer>- Willem of Orange, leader in the Dutch Revolt</footer>
+                      </div>
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Rembrandt_Harmenszoon_van_Rijn_-_Large_Self-Portrait_-_Google_Art_Project.jpg/1200px-Rembrandt_Harmenszoon_van_Rijn_-_Large_Self-Portrait_-_Google_Art_Project.jpg" alt="Rembrandt" class="figure-image">
+                        <div>
+                            <h4>Rembrandt van Rijn</h4>
+                            <p>One of the most famous painters and printmakers in history, Rembrandt is known for his incredible ability to capture human emotion and detail. His masterpieces include The Night Watch and The Anatomy Lesson of Dr. Nicolaes Tulp.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "There is no rule that says I must not make a self-portrait, or anything else I like, for that matter."
+                        </blockquote>
+                        <footer>- Rembrandt van Rijn, Dutch painter</footer>
+                      </div>
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Anthonie_van_Leeuwenhoek_%281632-1723%29._Natuurkundige_te_Delft_Rijksmuseum_SK-A-957.jpeg/220px-Anthonie_van_Leeuwenhoek_%281632-1723%29._Natuurkundige_te_Delft_Rijksmuseum_SK-A-957.jpeg" alt="Anthonie" class="figure-image">
+                        <div>
+                            <h4>Antonie van Leeuwenhoek</h4>
+                            <p>Known as the "Father of Microbiology," van Leeuwenhoek made groundbreaking improvements to the microscope and was the first to observe and describe single-celled organisms, which he called "animalcules."</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "I have observed more things in nature than most men can even imagine."
+                        </blockquote>
+                        <footer>- Antonie van Leeuwenhoek, Dutch scientist and microbiologist</footer>
+                      </div>
+                      
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Michiel_Jansz_van_Mierevelt_-_Hugo_Grotius.jpg/220px-Michiel_Jansz_van_Mierevelt_-_Hugo_Grotius.jpg" alt="Hugo" class="figure-image">
+                        <div>
+                            <h4>Hugo Grotius</h4>
+                            <p>A legal scholar and philosopher who laid the foundations for international law, particularly through his work De jure belli ac pacis (On the Law of War and Peace), which is considered one of the earliest books on international law.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "The law of nations is the law of nature, which is common to all men and governs them in their relations with each other."
+                        </blockquote>
+                        <footer>- Hugo Grotius, Dutch philosopher and jurist</footer>
+                      </div>
+                      
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Spinoza.jpg/220px-Spinoza.jpg" alt="Baruch" class="figure-image">
+                        <div>
+                            <h4>Baruch Spinoza</h4>
+                            <p>A philosopher known for his works that laid the groundwork for the Enlightenment and modern biblical criticism. His magnum opus, Ethics, presented an innovative view of God, the universe, and human nature.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "The highest activity a human being can attain is learning for understanding, because to understand is to be free."
+                        </blockquote>
+                        <footer>- Baruch Spinoza, Dutch philosopher</footer>
+                      </div>
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/220px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg" alt="VanGogh" class="figure-image">
+                        <div>
+                            <h4>Vincent van Gogh</h4>
+                            <p>One of the most influential painters in Western art, van Gogh is known for his vivid use of color and emotional intensity. Some of his iconic works include Starry Night, Sunflowers, and Café Terrace at Night.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "I dream my painting, and then I paint my dream."
+                        </blockquote>
+                        <footer>- Vincent van Gogh, Post-Impressionist painter</footer>
+                      </div>
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Jacob_Merkelbach%2C_Afb_010164033120.jpg/220px-Jacob_Merkelbach%2C_Afb_010164033120.jpg" alt="Wilhelmina" class="figure-image">
+                        <div>
+                            <h4>Queen Wilhelmina</h4>
+                            <p>The longest-reigning Dutch monarch who played a significant role during both World Wars. She was a symbol of resistance and resilience for the Dutch people during World War II while in exile.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "I will always choose the path of courage, for only through courage can we overcome adversity."
+                        </blockquote>
+                        <footer>- Queen Wilhelmina of the Netherlands</footer>
+                      </div>
+
+                    <div class="key-figure" data-aos="fade-up">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Prinses_Beatrix.jpg/220px-Prinses_Beatrix.jpg" alt="Beatrix" class="figure-image">
+                        <div>
+                            <h4>Queen Beatrix</h4>
+                            <p>Queen Beatrix succeeded Queen Juliana, marking a new era for the Dutch monarchy. She is known for her progressive values and her role in promoting democracy and human rights.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote>
+                          "In my reign, I have tried to serve the Dutch people in the best way I could, with heart and soul."
+                        </blockquote>
+                        <footer>- Queen Beatrix of the Netherlands</footer>
+                      </div>
+        
+
+                    <h2 class="section-title mt-5">Timeline</h2>
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">800 CE</div>
+                                <h4>Charlemane Establishes Control</h4>
+                                <p>Charlemagne establishes control over much of Western Europe, including the Netherlands. 800 CE is considered the beginning of the Carolingian Empire.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">10TH - 12TH Century</div>
+                                <h4>Rise of Feudal States</h4>
+                                <p>Feudal states emerge in Europe, with the Netherlands becoming a part of the Frankish Empire. The Dutch people are divided into smaller feudal fiefs.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1433</div>
+                                <h4>Burgundian Rule</h4>
+                                <p>French king Charles V conquers the Netherlands and establishes the Burgundian dynasty.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1517</div>
+                                <h4>Protestant Reformation</h4>
+                                <p>Protestantism begins to spread in the Netherlands, marking the beginning of the Dutch Reformation.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1568</div>
+                                <h4>Eighty Years War</h4>
+                                <p>1568 marked the start of the Eighty Years War against Spanish rule, led by William of Orange.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1581</div>
+                                <h4>Act of Abjuration</h4>
+                                <p>The Dutch declaration of independence from Spanish rule.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1602</div>
+                                <h4>VOC Founded</h4>
+                                <p>Establishment of the Dutch East India Company.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1609–1621</div>
+                                <h4>Twelve Years' Truce</h4>
+                                <p>A temporary peace period during the Eighty Years' War.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1648</div>
+                                <h4>Treaty of Westphalia</h4>
+                                <p>The treaty ended the Eighty Years' War, formally recognizing Dutch independence.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">17th Century</div>
+                                <h4>Golden Age</h4>
+                                <p>Era of economic, scientific, and cultural prosperity, with figures like Rembrandt and Huygens.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1795</div>
+                                <h4>Batavian Republic</h4>
+                                <p>French revolutionary forces established the Batavian Republic, ending the Dutch Republic.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1815</div>
+                                <h4>Kingdom of the Netherlands</h4>
+                                <p>Formation of the Kingdom of the Netherlands after Napoleon's defeat.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1848</div>
+                                <h4>New Constitution</h4>
+                                <p>Introduction of a new constitution, establishing a parliamentary democracy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1939–1945</div>
+                                <h4>World War II Occupation</h4>
+                                <p>German invasion and occupation of the Netherlands, with liberation in 1945.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1949</div>
+                                <h4>Independence of Indonesia</h4>
+                                <p>Indonesia, a former Dutch colony, gained independence after a protracted conflict.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1952</div>
+                                <h4>Founding of the European Coal and Steel Community (ECSC)</h4>
+                                <p>The Netherlands became a founding member of the ECSC, a precursor to the European Union.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1957</div>
+                                <h4>Treaty of Rome</h4>
+                                <p>The Netherlands signed the Treaty of Rome, establishing the European Economic Community (EEC).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1960s</div>
+                                <h4>Economic Boom</h4>
+                                <p>The Netherlands experienced rapid economic growth, modernization, and social changes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1973</div>
+                                <h4>Oil Crisis</h4>
+                                <p>The oil crisis led to economic challenges and a shift in energy policies in the Netherlands.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1980</div>
+                                <h4>Queen Beatrix's Reign</h4>
+                                <p>Queen Beatrix succeeded Queen Juliana, marking a new era for the Dutch monarchy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">1992</div>
+                                <h4>Maastricht Treaty</h4>
+                                <p>The treaty was signed in the Dutch city of Maastricht, establishing the European Union (EU).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">2002</div>
+                                <h4>Introduction of the Euro</h4>
+                                <p>The Netherlands adopted the euro, replacing the Dutch guilder as the official currency.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
