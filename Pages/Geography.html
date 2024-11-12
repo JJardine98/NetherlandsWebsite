@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
+    <script src="path/to/i18next.min.js"></script>
+    <script src="../translations.js"></script>
+    <script src="../init.js"></script>
     <style>
         :root {
             --dutch-orange: #FF6B1A;
@@ -101,9 +105,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
-                Netherlands
+            <img src="../Images/NetherlandsFlag.png" width="30" height="30" class="d-inline-block align-top me-2" alt="Dutch Flag">
+            <a class="navbar-brand" data-i18n="nav-title" href="#">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -111,108 +115,168 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" data-i18n="home-link" href="../index.html"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="History.html">History</a>
+                        <a class="nav-link" data-i18n="history-link" href="History.html"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Geography.html">Geography</a>
+                        <a class="nav-link active" data-i18n="geography-link" href="Geography.html"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Culture.html">Culture</a>
+                        <a class="nav-link" data-i18n="culture-link" href="Culture.html"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Current.html">Current</a>
+                        <a class="nav-link" data-i18n="current-link" href="Current.html"></a>
                     </li>
                 </ul>
+                <!-- Translation Button -->
+                <button class="btn btn-outline-light btn-sm ms-3" data-i18n="translate-button-en" onclick="changeLanguage('en')"></button>
+                <button class="btn btn-outline-light btn-sm ms-3" data-i18n="translate-button-nl" onclick="changeLanguage('nl')"></button>
+
             </div>
         </div>
     </nav>
 
     <div class="page-header">
         <div class="container">
-            <h1 class="display-3 mb-4">Dutch Geography</h1>
-            <p class="lead">Exploring the Landscapes of the Netherlands</p>
-        </div>
+            <h1 class="display-3 mb-4" data-i18n="geo-title"></h1>
+            <p class="lead" data-i18n="geo-subtitle"></p>
     </div>
-
-    <div class="container py-5">
-        <ul class="nav nav-tabs justify-content-center" id="geographyTabs" role="tablist">
-            <li class="nav-item">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#landmarks">
-                    Landmarks & Sites
-                </button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#features">
-                    Natural Features
-                </button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#location">
-                    Location & Cities
-                </button>
-            </li>
-        </ul>
-
+    </div>
+    
+    <div class="container">
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="landmarks">
-                <div class="row g-4">
-                    <div class="col-md-6" data-aos="fade-up">
-                        <div class="feature-card">
-                            <img src="../Images/vgmuseum.jpg" alt="Van Gogh Museum" class="feature-image">
-                            <div class="p-4">
-                                <h3>Van Gogh Museum</h3>
-                                <p>Home to the world's largest collection of works by Vincent van Gogh, featuring over 200 paintings and 500 drawings.</p>
-                            </div>
+            <h2 class="text-center mb-5 fw-bold" data-i18n="locations-title"></h2>
+            <div class="row g-4">
+                <!-- Van Gogh Museum -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/vgmuseum.jpg" alt="Van Gogh Museum" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="vgm-title"></h3>
+                            <p class="card-text text-muted" data-i18n="vgm-description"></p>
                         </div>
                     </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature-card">
-                            <img src="../Images/muiderslot.jpg" alt="Muiderslot Castle" class="feature-image">
-                            <div class="p-4">
-                                <h3>Muiderslot Castle</h3>
-                                <p>A medieval castle dating back to 1285, surrounded by water and beautiful gardens.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Additional landmarks... -->
                 </div>
-            </div>
+    
+                <!-- Muiderslot Castle -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/muiderslot.jpg" alt="Muiderslot Castle" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="muiderslot-title"></h3>
+                            <p class="card-text text-muted" data-i18n="muiderslot-description"></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Rijksmuseum -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/rijksmuseum.jpg" alt="Rijksmuseum" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="rijksmuseum-title"></h3>
+                            <p class="card-text text-muted" data-i18n="rijksmuseum-description"></p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <!-- Kinderdijk Windmills -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/osk.jfif" alt="Kinderdijk Windmills" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="kinderdijk-title"></h3>
+                            <p class="card-text text-muted" data-i18n="kinderdijk-description"></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Mauritshuis Museum -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/museum.jfif" alt="Mauritshuis Museum" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="mauritshuis-title"></h3>
+                            <p class="card-text text-muted" data-i18n="mauritshuis-description"></p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="tab-pane fade" id="features">
-                <div class="row g-4">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="feature-card" data-aos="fade-up">
-                            <img src="../Images/hills.png" alt="Dutch Hills" class="feature-image">
-                            <div class="p-4">
-                                <h3>Natural Landscapes</h3>
-                                <p>Despite being known as a flat country, the Netherlands features varied landscapes including rolling hills in the south.</p>
-                            </div>
+                <!-- Degooyer Windmill  -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/degooyer.jpg" alt="Degooyer" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="degooyer-title"></h3>
+                            <p class="card-text text-muted" data-i18n="degooyer-description"></p>
                         </div>
                     </div>
-                    <!-- Additional natural features... -->
                 </div>
-            </div>
+                
+                <h2 class="text-center mb-5 fw-bold" data-i18n="cities-title"></h2>
 
-            <div class="tab-pane fade" id="location">
-                <div class="row g-4">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="feature-card" data-aos="fade-up">
-                            <div class="p-4">
-                                <h3>Strategic Location</h3>
-                                <p>Located in Western Europe, the Netherlands borders Germany to the east, Belgium to the south, and the North Sea to the northwest.</p>
-                                <div class="quote-box">
-                                    "The Netherlands' strategic position at the mouth of several major European rivers has been key to its development as a trading nation."
-                                </div>
-                            </div>
+                <!-- Amsterdam -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/amster.jpeg" alt="Amsterdam" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="amsterdam-title"></h3>
+                            <p class="card-text text-muted" data-i18n="amsterdam-description"></p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Rotterdam -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/rotterdam.jpg" alt="Rotterdam" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="rotterdam-title"></h3>
+                            <p class="card-text text-muted" data-i18n="rotterdam-description"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keukenhof Gardens -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/kuekenhof.jpg" alt="Keukenhof Gardens" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="keukenhof-title"></h3>
+                            <p class="card-text text-muted" data-i18n="keukenhof-description"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Efteling Theme Park -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="../Images/efteling.jpg" alt="Efteling Theme Park" 
+                             class="card-img-top" style="height: 300px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-3" data-i18n="efteling-title"></h3>
+                            <p class="card-text text-muted" data-i18n="efteling-description"></p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
+    
 
     
 
@@ -224,5 +288,7 @@
             once: true
         });
     </script>
+
+
 </body>
 </html>

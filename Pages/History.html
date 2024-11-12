@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
+    <script src="path/to/i18next.min.js"></script>
+    <script src="../translations.js"></script>
+    <script src="../init.js"></script>
     <style>
         :root {
             --dutch-orange: #FF6B1A;
@@ -175,10 +179,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" data-i18n="home-link" href="../index.html"></a>
+                        <a class="nav-link" data-i18n="home-link" href="../index.html"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-i18n="history-link" href="History.html"></a>
+                        <a class="nav-link active" data-i18n="history-link" href="History.html"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-i18n="geography-link" href="Geography.html"></a>
@@ -191,8 +195,8 @@
                     </li>
                 </ul>
                 <!-- Translation Button -->
-                <button class="btn btn-outline-light btn-sm ms-3" data-i18n="translate-button-en" onclick="changeLanguage('en')"></button>
-                <button class="btn btn-outline-light btn-sm ms-3" data-i18n="translate-button-nl" onclick="changeLanguage('nl')"></button>
+                <button class="translate-btn btn btn-outline-light btn-sm ms-3" data-i18n="translate-button-en" onclick="changeLanguage('en')"></button>
+                <button class="translate-btn btn btn-outline-light btn-sm ms-3" data-i18n="translate-button-nl" onclick="changeLanguage('nl')"></button>
 
             </div>
         </div>
@@ -200,8 +204,8 @@
 
     <div class="page-header">
         <div class="container">
-            <h1 class="display-3 mb-4" data-i18n="welcomeMessage"></h1>
-            <p class="lead" data-i18n="exploreButton"></p>
+            <h1 class="display-3 mb-4" data-i18n="history-title"></h1>
+            <p class="lead" data-i18n="history-description"></p>
         </div>
     </div>
 
@@ -481,260 +485,6 @@
             once: true
         });
     </script>
-     <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
-
-     <script>
-        i18next.init({
-   lng: 'en', // Default language
-   resources: {
-     en: {
-       translation: {
-         "translate-button-en": "English",
-         "translate-button-nl": "Dutch",
-         "nav-title": "Netherlands",
-         "welcomeMessage": "Explore Dutch History",
-         "exploreButton": "Explore the Golden Age, Historical Figures and a Timeline",
-         "home-link": "Home",
-         "history-link": "History",
-         "geography-link": "Geography",
-         "culture-link": "Culture",
-         "current-link": "Current",
-         "golden" : "Golden Age",
-         "Maritime Trade": "Maritime Trade",
-         "Maritime Trade Description": "During the 17th century, the Dutch Republic was the world's leading maritime power, with a vast trading empire spanning the globe. The Dutch East India Company (VOC) became the world's first multinational corporation.",
-         "Art History": "Art History",
-         "Art History Description": "The Golden Age saw unprecedented achievements in art, science, and trade. Dutch painters like Rembrandt and Vermeer created masterpieces that continue to influence artists today.",
-         "Golden Age Quote": "The Dutch Golden Age marked a period of unprecedented prosperity and cultural achievement, establishing the Netherlands as a major world power.",
-         "Historical Figures" : "Key Historical Figures",
-         "William" : "William of Orange",
-         "William Description" : "Also known as William the Silent, he was the main leader of the Dutch Revolt against Spanish rule, which led to the Eighty Years' War and ultimately resulted in the independence of the Dutch Republic. He is considered the Father of the Fatherland in the Netherlands.",
-         "William Quote" : "I have come to the conclusion that my country is worth more than my life.",
-         "William Footer" : " - Willem of Orange, leader in the Dutch Revolt",
-         "Rembrandt" : "Rembrandt van Rijn",
-         "Rembrandt Description" : "A Dutch painter known for his ability to capture human emotion and detail. He is considered one of the greatest painters in history and is known for his iconic works such as The Night Watch and The Anatomy Lesson of Dr. Nicolaes Tulp.",
-         "Rembrandt Quote" : "There is no rule that says I must not make a self-portrait, or anything else I like, for that matter.",
-         "Rembrandt Footer" : " - Rembrandt van Rijn, Dutch painter",
-         "Anthonie" : "Anthonie van Leeuwenhoek",
-         "Anthonie Description" : "A Dutch scientist known for his groundbreaking improvements to the microscope and his discovery of single-celled organisms. He is considered one of the most important scientists in history and is known for his work on the microscope and his contributions to the field of biology.",
-         "Anthonie Quote" : "I have observed more things in nature than most men can even imagine.",
-         "Anthonie Footer" : " - Anthonie van Leeuwenhoek, Dutch scientist",
-         "Hugo" : "Hugo Grotius",
-         "Hugo Description" : "A Dutch legal scholar and philosopher who laid the foundations for international law, particularly through his work De jure belli ac pacis (On the Law of War and Peace), which is considered one of the earliest books on international law.",
-         "Hugo Quote" : "The law of nations is the law of nature, which is common to all men and governs them in their relations with each other.",
-         "Hugo Footer" : " - Hugo Grotius, Dutch philosopher and jurist",
-         "Baruch" : "Baruch Spinoza",
-         "Baruch Description" : "A Dutch philosopher known for his works that laid the groundwork for the Enlightenment and modern biblical criticism. His magnum opus, Ethics, presented an innovative view of God, the universe, and human nature.",
-         "Baruch Quote" : "The highest activity a human being can attain is learning for understanding, because to understand is to be free.",
-         "Baruch Footer" : " - Baruch Spinoza, Dutch philosopher",
-         "Vincent" : "Vincent van Gogh",
-         "Vincent Description" : "A Dutch painter known for his vivid use of color and emotional intensity. Some of his iconic works include Starry Night, Sunflowers, and Café Terrace at Night.",
-         "Vincent Quote" : "I dream my painting, and then I paint my dream.",
-         "Vincent Footer" : " - Vincent van Gogh, Post-Impressionist painter",
-         "Wilhelmina" : "Queen Wilhelmina",
-         "Wilhemina Description" : "The longest-reigning Dutch monarch who played a significant role during both World Wars. She was a symbol of resistance and resilience for the Dutch people during World War II while in exile.",
-         "Wilhemina Quote" : "I will always choose the path of courage, for only through courage can we overcome adversity.",
-         "Wilhemina Footer" : " - Queen Wilhelmina of the Netherlands",
-         "Beatrix" : "Queen Beatrix",
-         "Beatrix Description" : "Queen Beatrix succeeded Queen Juliana, marking a new era for the Dutch monarchy. She is known for her progressive values and her role in promoting democracy and human rights.",
-         "Beatrix Quote" : "In my reign, I have tried to serve the Dutch people in the best way I could, with heart and soul.",
-         "Beatrix Footer" : " - Queen Beatrix of the Netherlands",
-         "Timeline" : "Timeline",
-         "Date1" : "800 CE",
-         "Title1" : "Charlemane Establishes Control",
-         "Desc1" : "Charlemagne establishes control over much of Western Europe, including the Netherlands. 800 CE is considered the beginning of the Carolingian Empire.",
-         "Date2" : "10TH - 12TH Century",
-         "Title2" : "Rise of Feudal States",
-         "Desc2" : "Feudal states emerge in Europe, with the Netherlands becoming a part of the Frankish Empire. The Dutch people are divided into smaller feudal fiefs.",
-
-         "Date3": "1568",
-        "Title3": "Eighty Years War",
-        "Desc3": "1568 marked the start of the Eighty Years War against Spanish rule, led by William of Orange.",
-        
-        "Date4": "1581",
-        "Title4": "Act of Abjuration",
-        "Desc4": "The Dutch declaration of independence from Spanish rule.",
-        
-        "Date5": "1602",
-        "Title5": "VOC Founded",
-        "Desc5": "Establishment of the Dutch East India Company.",
-        
-        "Date6": "1609–1621",
-        "Title6": "Twelve Years' Truce",
-        "Desc6": "A temporary peace period during the Eighty Years' War.",
-        
-        "Date7": "1648",
-        "Title7": "Treaty of Westphalia",
-        "Desc7": "The treaty ended the Eighty Years' War, formally recognizing Dutch independence.",
-        
-        "Date8": "17th Century",
-        "Title8": "Golden Age",
-        "Desc8": "Era of economic, scientific, and cultural prosperity, with figures like Rembrandt and Huygens.",
-        
-        "Date9": "1795",
-        "Title9": "Batavian Republic",
-        "Desc9": "French revolutionary forces established the Batavian Republic, ending the Dutch Republic.",
-        
-        "Date10": "1815",
-        "Title10": "Kingdom of the Netherlands",
-        "Desc10": "Formation of the Kingdom of the Netherlands after Napoleon's defeat.",
-        
-        "Date11": "1848",
-        "Title11": "New Constitution",
-        "Desc11": "Introduction of a new constitution, establishing a parliamentary democracy.",
-        
-        "Date12": "1939–1945",
-        "Title12": "World War II Occupation",
-        "Desc12": "German invasion and occupation of the Netherlands, with liberation in 1945.",
-        
-        "Date13": "1949",
-        "Title13": "Independence of Indonesia",
-        "Desc13": "Indonesia, a former Dutch colony, gained independence after a protracted conflict.",
-        
-        "Date14": "1952",
-        "Title14": "Founding of the European Coal and Steel Community (ECSC)",
-        "Desc14": "The Netherlands became a founding member of the ECSC, a precursor to the European Union.",
-        
-        "Date15": "1957",
-        "Title15": "Treaty of Rome",
-        "Desc15": "The Netherlands signed the Treaty of Rome, establishing the European Economic Community (EEC)."
-
-       }
-     },
-     nl: {
-       translation: {
-         "translate-button-en": "Engels",
-         "translate-button-nl": "Nederlands",
-         "nav-title": "Nederland",
-         "welcomeMessage": "Ontdek de Nederlandse geschiedenis",
-         "exploreButton": "Ontdek de Gouden Eeuw, Historische Figuren en een Tijdlijn",
-         "home-link": "Home",
-         "history-link": "Historie",
-         "geography-link": "Geografie",
-         "culture-link": "Cultuur",
-         "current-link": "Huidige Nederland",
-         "golden" : "Goudschaal",
-         "Maritime Trade": "Maritale Handel",
-         "Maritime Trade Description": "Deze jaren was het Nederlandse Rijk de werelds grootste maritieme macht, met een grote handelsomgeving over de hele wereld. Het Nederlandse East India Company (VOC) was de eerste wereldse multinationale corporatie.",
-         "Art History": "Kunsthistorie",
-         "Art History Description": "De Goudschaal was een periode van enorme creativiteit en ontwikkeling in kunst, wetenschap en handel. Nederlandse painters zoals Rembrandt en Vermeer creëerden masterpieces die nog steeds influenceer hun kinderen.",
-         "Golden Age Quote": "De Goudschaal was een periode van enorme creativiteit en ontwikkeling in kunst, wetenschap en handel. Nederlandse painters zoals Rembrandt en Vermeer creëerden masterpieces die nog steeds influenceer hun kinderen.",
-         "Historical Figures" : "Key Historical Figures",
-         "William" : "Willem van Orange",
-         "William Description" : "Anderwijl Willem van Orange de hoofdman van de Nederlandse Revolt was, was hij ook de hoofdman van de Nederlandse Rijk. Hij was de vader van de Vlaamse Vlaamse Republiek in Nederland.",
-         "William Quote" : "Ik heb het verstand dat mijn land meer is dan mijn leven.",
-         "William Footer" : " - Willem van Orange, hoofdman van de Nederlandse Revolt",
-         "Rembrandt" : "Rembrandt van Rijn",
-         "Rembrandt Description" : "Een Nederlandse schilder die bekend is voor zijn talent om mensen emotioneel te captueren en detail te maken. Hij is bekend voor zijn meest bekende werk zoals The Night Watch en The Anatomy Lesson of Dr. Nicolaes Tulp.",
-         "Rembrandt Quote" : "Er is geen regel die zegt dat ik niet moet maken een self-portrait, of iets anders ik like, voor dat maar.",
-         "Rembrandt Footer" : " - Rembrandt van Rijn, Nederlandse schilder",
-         "Anthonie" : "Anthonie van Leeuwenhoek",
-         "Anthonie Description" : "Een Nederlandse scientist die bekend is voor zijn belangrijke verbeteringen aan de microscope en zijn ontdekking van single-celled organismen. Hij is bekend voor zijn werk op de microscope en zijn invloed op de wetenschap van biologie.",
-         "Anthonie Quote" : "Ik heb meer dingen in de natuur dan meest mensen kunnen imagineeren.",
-         "Anthonie Footer" : " - Anthonie van Leeuwenhoek, Nederlandse scientist",
-         "Hugo" : "Hugo Grotius",
-        "Hugo Description" : "Een Nederlandse rechtsgeleerde en filosoof die de basis legde voor het internationaal recht, met name door zijn werk *De jure belli ac pacis* (Over het recht van oorlog en vrede), dat wordt beschouwd als een van de vroegste boeken over internationaal recht.",
-        "Hugo Quote" : "Het recht van de naties is het recht van de natuur, dat gemeenschappelijk is voor alle mensen en hen regeert in hun onderlinge relaties.",
-        "Hugo Footer" : " - Hugo Grotius, Nederlandse filosoof en jurist",
-        "Baruch" : "Baruch Spinoza",
-        "Baruch Description" : "Een Nederlandse filosoof die bekend is om zijn werken die de basis legden voor de Verlichting en moderne bijbelkritiek. Zijn magnum opus, *Ethica*, presenteerde een innovatieve visie op God, het universum en de menselijke natuur.",
-        "Baruch Quote" : "De hoogste activiteit die een mens kan bereiken is leren om te begrijpen, want begrijpen is vrij zijn.",
-        "Baruch Footer" : " - Baruch Spinoza, Nederlandse filosoof",
-        "Vincent" : "Vincent van Gogh",
-        "Vincent Description" : "Een Nederlandse schilder die bekend staat om zijn levendige gebruik van kleur en emotionele intensiteit. Enkele van zijn iconische werken zijn *Sterrennacht*, *Zonnebloemen*, en *Caféterras bij nacht*.",
-        "Vincent Quote" : "Ik droom mijn schilderij, en daarna schilder ik mijn droom.",
-        "Vincent Footer" : " - Vincent van Gogh, Postimpressionistische schilder",
-        "Wilhelmina" : "Koningin Wilhelmina",
-        "Wilhemina Description" : "De langst regerende Nederlandse monarch die een belangrijke rol speelde tijdens beide wereldoorlogen. Ze was een symbool van verzet en veerkracht voor het Nederlandse volk tijdens de Tweede Wereldoorlog, terwijl ze in ballingschap was.",
-        "Wilhemina Quote" : "Ik zal altijd het pad van moed kiezen, want alleen door moed kunnen we tegenspoed overwinnen.",
-        "Wilhemina Footer" : " - Koningin Wilhelmina van Nederland",
-        "Beatrix" : "Koningin Beatrix",
-        "Beatrix Description" : "Koningin Beatrix volgde Koningin Juliana op, waarmee een nieuw tijdperk voor de Nederlandse monarchie begon. Ze stond bekend om haar progressieve waarden en haar rol in het bevorderen van democratie en mensenrechten.",
-        "Beatrix Quote" : "Tijdens mijn regeerperiode heb ik geprobeerd het Nederlandse volk op de beste manier die ik kon te dienen, met hart en ziel.",
-        "Beatrix Footer" : " - Koningin Beatrix van Nederland",
-        "Timeline" : "Tijdlijn",
-        "Date1" : "800 CE",
-        "Title1" : "Charlemagne vestigt controle",
-        "Desc1" : "Charlemagne verleidde controle over veel van de Westelijke Europa, incluïnd het Nederland. 800 CE is de begin van de Carolingian Empire.",
-        "Date2" : "10e - 12e Eeuw",
-        "Title2" : "Opkomst van Feodale Staten",
-        "Desc2" : "Feudalstaaten ontstonden in Europa, met het Nederland als een deel van de Frankish Rijk. Nederlandse mensen werden gescheiden in kleine feudale fiefen.",
-
-        "Date3": "1568",
-        "Title3": "Tachtigjarige Oorlog",
-        "Desc3": "1568 markeerde het begin van de Tachtigjarige Oorlog tegen de Spaanse overheersing, geleid door Willem van Oranje.",
-        
-        "Date4": "1581",
-        "Title4": "Acte van Verlatinghe",
-        "Desc4": "De Nederlandse onafhankelijkheidsverklaring van de Spaanse overheersing.",
-        
-        "Date5": "1602",
-        "Title5": "VOC Opgericht",
-        "Desc5": "De oprichting van de Verenigde Oost-Indische Compagnie.",
-        
-        "Date6": "1609–1621",
-        "Title6": "Twaalfjarig Bestand",
-        "Desc6": "Een tijdelijke vredesperiode tijdens de Tachtigjarige Oorlog.",
-        
-        "Date7": "1648",
-        "Title7": "Vrede van Westfalen",
-        "Desc7": "De vrede eindigde de Tachtigjarige Oorlog en erkende de Nederlandse onafhankelijkheid.",
-        
-        "Date8": "17e Eeuw",
-        "Title8": "Gouden Eeuw",
-        "Desc8": "Periode van economische, wetenschappelijke en culturele welvaart, met figuren zoals Rembrandt en Huygens.",
-        
-        "Date9": "1795",
-        "Title9": "Batavische Republiek",
-        "Desc9": "Franse revolutionaire troepen vestigden de Batavische Republiek en beëindigden de Nederlandse Republiek.",
-        
-        "Date10": "1815",
-        "Title10": "Koninkrijk der Nederlanden",
-        "Desc10": "Oprichting van het Koninkrijk der Nederlanden na de nederlaag van Napoleon.",
-        
-        "Date11": "1848",
-        "Title11": "Nieuwe Grondwet",
-        "Desc11": "Invoering van een nieuwe grondwet die een parlementaire democratie vestigde.",
-        
-        "Date12": "1939–1945",
-        "Title12": "Bezetting Tweede Wereldoorlog",
-        "Desc12": "Duitse invasie en bezetting van Nederland, met bevrijding in 1945.",
-        
-        "Date13": "1949",
-        "Title13": "Onafhankelijkheid van Indonesië",
-        "Desc13": "Indonesië, een voormalige Nederlandse kolonie, kreeg na een langdurig conflict onafhankelijkheid.",
-        
-        "Date14": "1952",
-        "Title14": "Oprichting van de Europese Gemeenschap voor Kolen en Staal (EGKS)",
-        "Desc14": "Nederland werd een oprichtingslid van de EGKS, een voorloper van de Europese Unie.",
-        
-        "Date15": "1957",
-        "Title15": "Verdrag van Rome",
-        "Desc15": "Nederland ondertekende het Verdrag van Rome en vestigde de Europese Economische Gemeenschap (EEG)."
-        
-        
-       }
-     }
-   }
- }, function(err, t) {
-   updateTranslations();  // Initial update after i18next is initialized
- });
- 
- function changeLanguage(lng) {
-   i18next.changeLanguage(lng, function(err, t) {
-     updateTranslations();  // Update translations after language change
-   });
- }
- 
- function updateTranslations() {
-   // Select all elements with the data-i18n attribute
-   const elements = document.querySelectorAll('[data-i18n]');
- 
-   elements.forEach(function(element) {
-     const key = element.getAttribute('data-i18n');
-     element.innerText = i18next.t(key);
-   });
- }
- 
-       </script>
+     
 </body>
 </html>
